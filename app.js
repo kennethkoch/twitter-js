@@ -27,3 +27,7 @@ app.use(morgan('dev'))
 app.get('/news', (req, res) => {
 
 })
+
+
+
+console.log('hello')
