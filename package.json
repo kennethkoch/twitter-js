@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennethkoch/twitter-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kennethkoch/twitter-js/issues"
+  },
+  "homepage": "https://github.com/kennethkoch/twitter-js#readme"
 }
