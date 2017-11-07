@@ -1,3 +1,4 @@
+'use strict'
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -5,7 +6,7 @@ const PORT = 3000;
 const routes = require('./routes');
 
 
-app.use('/', routes);
+app.use(routes);
 
 const nunjucks = require('nunjucks');
 const tweetBank = require('./tweetBank');
@@ -24,11 +25,13 @@ app.listen(PORT, () => {
 // //  ].join(' ')
 // // })
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.use(function (req, res, next) {
   console.log(req.method + ' ' + req.originalUrl + ' ' + res.statusCode);
 })
+
+app.set('views', __dirname + '/views')
 
 // app.get('/news', (req, res) => {
 
@@ -51,7 +54,7 @@ app.use(function (req, res, next) {
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
-nunjucks.configure('views', {
+nunjucks.configure('routes', {
   noCache: true
 });
 
