@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
   console.log(req.method + ' ' + req.originalUrl + ' ' + res.statusCode);
 })
 
-app.set('views', __dirname + '/views')
+// app.set('views', __dirname + '/views')
 
 // app.get('/news', (req, res) => {
 
@@ -54,7 +54,7 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
-nunjucks.configure('routes', {
+nunjucks.configure('views', {
   noCache: true
 });
 
